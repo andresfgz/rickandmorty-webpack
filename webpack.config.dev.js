@@ -13,13 +13,14 @@ module.exports = { //creamos el objeto de configuracion
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
     mode: 'development',
+    watch: true,
     resolve: { //con que tipo de archivos vamos a usar
         extensions: ['.js'],
         alias: {
             '@utils': path.resolve(__dirname, 'src/utils/'),
             '@templates': path.resolve(__dirname, 'src/templates/'),
             '@styles': path.resolve(__dirname, 'src/styles/'),
-            '@images': path.resolve(__dirname, 'src/assets/images/'),
+            '@images': path.resolve(__dirname, 'src/assets/images/'), 
           }
     },
     module: {
