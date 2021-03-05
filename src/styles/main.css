@@ -12,7 +12,8 @@ html {
 }
 
 body {
-	margin: 0
+	margin: 0;
+	
 }
 
 article,
@@ -222,7 +223,7 @@ th {
 }
 
 body {
-	background-color: #f9f9f9;
+	background-color: #a9f3fd;
 	font-family: Ubuntu, sans-serif;
 }
 
@@ -235,9 +236,10 @@ body {
 .About {
   align-items: center;
   display: grid;
-  grid-template-columns: minmax(auto, 1024px);
+  grid-template-columns: minmax(auto, 1200px);
   justify-content: center;
   padding: 4em 0;
+  margin-top: 14%;
 }
 
 .card {
@@ -268,8 +270,8 @@ body {
 	position: relative;
 	background: #fff;
 	padding: 5px;
-	width: 190px;
-	height: 190px;
+	width: 250px;
+    height: 250px;
 	border-radius: 50%;
 	margin-bottom: 30px;
 	border: 1px solid rgba(0, 0, 0, .25)
@@ -281,14 +283,14 @@ body {
 }
 
 .card_title {
-	color: #999;
-	font-size: 18px;
+	color: rgb(167, 167, 167);
+	font-size: 25px;
 	margin: 0
 }
 
 .card_value {
 	color: #2c2e31;
-	font-size: 38px;
+	font-size: 42px;
 	margin: 5px;
 	text-transform: capitalize
 }
@@ -299,7 +301,8 @@ body {
 
 .card li {
   display: inline-block;
-  margin: 0 1em 0 0
+  margin: 0 1em 0 0;
+  font-size: 20px;
 }
 
 .card_social {
@@ -325,7 +328,7 @@ body {
 
 .circle svg {
   fill: none;
-  stroke: #8a3ab9;
+  stroke: #02afc5;
   stroke-linecap: round;
   stroke-width: 3;
   stroke-dasharray: 1;
@@ -341,11 +344,11 @@ body {
 
 @keyframes stroke-draw {
   from {
-    stroke: #8a3ab9;
+    stroke: #02afc5;
     stroke-dasharray: 1;
   }
   to {
-    stroke: #cd486b;
+    stroke: #03cae4;
     transform: rotate(180deg);
     stroke-dasharray: 8;
   }
