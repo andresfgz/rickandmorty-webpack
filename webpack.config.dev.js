@@ -2,10 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const CssMinimizerPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-const { CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 
 module.exports = { //creamos el objeto de configuracion
@@ -15,6 +12,7 @@ module.exports = { //creamos el objeto de configuracion
         filename: "[name].[contenthash].js", //nombre del archivo final
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
+    mode: 'development',
     resolve: { //con que tipo de archivos vamos a usar
         extensions: ['.js'],
         alias: {
@@ -76,14 +74,5 @@ module.exports = { //creamos el objeto de configuracion
             ]
         }),
         new Dotenv(),
-        new CleanWebpackPlugin(),
     ],
-
-    optimization: { //agregamos el soporte de optimizacion
-        minimize: true,
-        minimizer: [
-            new CssMinimizerPlugin(), //optimizacion para css
-            new TerserPlugin(), //optimizacion para js
-        ]
-    }
 };
